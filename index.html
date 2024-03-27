@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <style>
+        body {
+            font-family: 'Arial Rounded MT Bold', sans-serif;
+            background-color: #f0f2f5; 
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #ffffff; 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #3b5998; 
+        }
+
+        p {
+            color: #333333; 
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #1877f2; 
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .countdown {
+            font-size: 36px;
+            color: #3b5998;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Redirecting...</h1>
+        <p>Redirecting to a support page. Please wait...</p>
+        <p class="countdown">3</p>
+        <p>If you are not redirected automatically, please click <a href="https://adsmaster721.github.io/pentest2/">here</a>.</p>
+    </div>
+    <script>
+        var countdownElement = document.querySelector('.countdown');
+        var timeLeft = 3;
+        var countdownInterval = setInterval(function() {
+            timeLeft--;
+
+            countdownElement.textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = 'https://google.com';
+            }
+        }, 1000); 
+    </script>
+</body>
+</html>
